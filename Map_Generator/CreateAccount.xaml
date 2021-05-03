@@ -1,0 +1,175 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com" x:Class="Map_Generator.CreateAccount"
+        mc:Ignorable="d"
+        Title="Labryinth Map Generator" Height="447" Width="900" Background="{x:Null}" WindowStyle="None" ResizeMode="NoResize" Foreground="Black" WindowStartupLocation="CenterScreen" AllowsTransparency="True">
+    <Window.Resources>
+        <Storyboard x:Key="StartAppear"/>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <Style x:Key="BtnLogin" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid HorizontalAlignment="Left" Height="56.6" VerticalAlignment="Top" Width="347.2" Margin="0,0,-5.2,-1.6">
+                            <Rectangle Fill="{x:Null}" HorizontalAlignment="Left" Height="55" Stroke="White" VerticalAlignment="Top" Width="344.8" Margin="0,0,-204.8,0"/>
+                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Margin="0,10.53,0,0" Foreground="White" Width="344.8" Height="27.8" TextAlignment="Center" FontSize="20"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true"/>
+                            <Trigger Property="IsMouseOver" Value="true"/>
+                            <Trigger Property="IsPressed" Value="true"/>
+                            <Trigger Property="IsEnabled" Value="false"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="BtnLogin2" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid HorizontalAlignment="Left" Height="56.6" VerticalAlignment="Top" Width="160" Margin="0,0,0,-1.6">
+                            <Rectangle Fill="{x:Null}" HorizontalAlignment="Left" Height="56.6" Stroke="White" VerticalAlignment="Top" Width="160" Margin="0"/>
+                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Back to Login" VerticalAlignment="Top" Margin="0,13.53,0,0" Foreground="White" Width="160" Height="27.8" TextAlignment="Center" FontSize="20"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true"/>
+                            <Trigger Property="IsMouseOver" Value="true"/>
+                            <Trigger Property="IsPressed" Value="true"/>
+                            <Trigger Property="IsEnabled" Value="false"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="BtnCreate" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid HorizontalAlignment="Left" Height="56.6" VerticalAlignment="Top" Width="160" Margin="0,0,0,-1.6">
+                            <Rectangle Fill="{x:Null}" HorizontalAlignment="Left" Height="56.6" Stroke="White" VerticalAlignment="Top" Width="160" Margin="0"/>
+                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Create Account" VerticalAlignment="Top" Margin="0,13.53,0,0" Foreground="White" Width="160" Height="27.8" TextAlignment="Center" FontSize="20"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true"/>
+                            <Trigger Property="IsMouseOver" Value="true"/>
+                            <Trigger Property="IsPressed" Value="true"/>
+                            <Trigger Property="IsEnabled" Value="false"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource StartAppear}"/>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid HorizontalAlignment="Left" Height="449.667" Margin="-1.067,-2.667,0,0" VerticalAlignment="Top" Width="901.067">
+        <Rectangle HorizontalAlignment="Left" Height="449.667" RadiusY="20.834" RadiusX="20.834" Stroke="Black" VerticalAlignment="Top" Width="901.067" Fill="Black"/>
+        <Canvas x:Name="Background" Margin="0,-0.333,495.567,-147.5">
+            <Canvas Height="597.5" Width="206">
+                <Image x:Name="BackView" HorizontalAlignment="Left" Height="200" VerticalAlignment="Top" Width="200" gif:ImageBehavior.AnimatedSource="MazeBack.gif"/>
+                <Image x:Name="BackView_Copy" HorizontalAlignment="Left" Height="200" VerticalAlignment="Top" Width="206" gif:ImageBehavior.AnimatedSource="MazeBack.gif" Canvas.Top="198.5"/>
+                <Image x:Name="BackView_Copy1" HorizontalAlignment="Left" Height="200" VerticalAlignment="Top" Width="206" gif:ImageBehavior.AnimatedSource="MazeBack.gif" Canvas.Top="397.5"/>
+            </Canvas>
+            <Canvas Height="597.5" Canvas.Left="199.5" Width="206">
+                <Image x:Name="BackView1" HorizontalAlignment="Left" Height="200" VerticalAlignment="Top" Width="200" gif:ImageBehavior.AnimatedSource="MazeBack.gif"/>
+                <Image x:Name="BackView_Copy2" HorizontalAlignment="Left" Height="200" VerticalAlignment="Top" Width="206" gif:ImageBehavior.AnimatedSource="MazeBack.gif" Canvas.Top="198.5"/>
+                <Image x:Name="BackView_Copy3" HorizontalAlignment="Left" Height="200" VerticalAlignment="Top" Width="206" gif:ImageBehavior.AnimatedSource="MazeBack.gif" Canvas.Top="397.5"/>
+            </Canvas>
+        </Canvas>
+        <Canvas x:Name="Background2" Margin="399,-0.333,-305.433,-147.5">
+            <Canvas x:Name="Background_Copy" Height="597.5" Width="407">
+                <Canvas Height="597.5" Width="206">
+                    <Image x:Name="BackView2" HorizontalAlignment="Left" Height="200" VerticalAlignment="Top" Width="200" gif:ImageBehavior.AnimatedSource="MazeBack.gif"/>
+                    <Image x:Name="BackView_Copy4" HorizontalAlignment="Left" Height="200" VerticalAlignment="Top" Width="206" gif:ImageBehavior.AnimatedSource="MazeBack.gif" Canvas.Top="198.5"/>
+                    <Image x:Name="BackView_Copy5" HorizontalAlignment="Left" Height="200" VerticalAlignment="Top" Width="206" gif:ImageBehavior.AnimatedSource="MazeBack.gif" Canvas.Top="397.5"/>
+                </Canvas>
+                <Canvas Height="597.5" Canvas.Left="199.5" Width="206">
+                    <Image x:Name="BackView3" HorizontalAlignment="Left" Height="200" VerticalAlignment="Top" Width="200" gif:ImageBehavior.AnimatedSource="MazeBack.gif"/>
+                    <Image x:Name="BackView_Copy6" HorizontalAlignment="Left" Height="200" VerticalAlignment="Top" Width="206" gif:ImageBehavior.AnimatedSource="MazeBack.gif" Canvas.Top="198.5"/>
+                    <Image x:Name="BackView_Copy7" HorizontalAlignment="Left" Height="200" VerticalAlignment="Top" Width="206" gif:ImageBehavior.AnimatedSource="MazeBack.gif" Canvas.Top="397.5"/>
+                </Canvas>
+            </Canvas>
+            <Canvas x:Name="Background_Copy1" Height="597.5" Canvas.Left="400.5" Width="407">
+                <Canvas Height="597.5" Width="206">
+                    <Image x:Name="BackView4" HorizontalAlignment="Left" Height="200" VerticalAlignment="Top" Width="200" gif:ImageBehavior.AnimatedSource="MazeBack.gif" Canvas.Left="-1.5"/>
+                    <Image x:Name="BackView_Copy8" HorizontalAlignment="Left" Height="200" VerticalAlignment="Top" Width="206" gif:ImageBehavior.AnimatedSource="MazeBack.gif" Canvas.Top="198.5" Canvas.Left="-1.5"/>
+                    <Image x:Name="BackView_Copy9" HorizontalAlignment="Left" Height="200" VerticalAlignment="Top" Width="206" gif:ImageBehavior.AnimatedSource="MazeBack.gif" Canvas.Top="397.5" Canvas.Left="-1.5"/>
+                </Canvas>
+                <Canvas Height="597.5" Canvas.Left="199.5" Width="206"/>
+            </Canvas>
+        </Canvas>
+        <Rectangle x:Name="RightPanel" HorizontalAlignment="Left" Height="450" RadiusY="20.834" RadiusX="20.834" Stroke="Black" VerticalAlignment="Top" Width="450" Margin="451.067,0,0,-0.333" Fill="Black"/>
+        <Button x:Name="Close" Margin="879.133,10,10,425.997" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnClose">
+            <Canvas x:Name="Canvas" Height="25"  Width="25">
+                <Path Stroke="Red" StrokeThickness="1" Data="M0,0 L10,10 M0,10 L10,0"/>
+            </Canvas>
+        </Button>
+        <Button x:Name="Minimize" Content="" HorizontalAlignment="Left" Height="2" Margin="862.603,16.101,0,0" VerticalAlignment="Top" Width="12.867" Background="{x:Null}" BorderBrush="White" Click="BtnMinimize"/>
+        <Image x:Name="Logo" Source="logo.png" Stretch="Fill" RenderTransformOrigin="0.752,0.78" Margin="85.2,63.6,547.667,134.667"/>
+        <TextBlock x:Name="AppName" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontFamily="Unispace" FontSize="36" Text="Labyrinth Tech" Margin="70.8,348.4,0,0"/>
+        <TextBox x:Name="TxtPassword" HorizontalAlignment="Left" Margin="479,259.535,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="342" Height="35" VerticalContentAlignment="Center" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" CaretBrush="White"/>
+        <TextBox x:Name="TxtUsername" HorizontalAlignment="Left" Margin="479,132.601,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" Width="342" Height="35" VerticalContentAlignment="Center" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" CaretBrush="White"/>
+        <Rectangle x:Name="UserLine" HorizontalAlignment="Left" Height="5" Margin="479,165.267,0,0" RadiusY="20.834" RadiusX="20.834" Stroke="Black" VerticalAlignment="Top" Width="342">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.844,0.851" StartPoint="0.156,0.149">
+                    <GradientStop Color="#FFA57921" Offset="1"/>
+                    <GradientStop Color="#FFB0194F"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="PassLine" HorizontalAlignment="Left" Height="5" Margin="479,291.867,0,0" RadiusY="20.834" RadiusX="20.834" Stroke="Black" VerticalAlignment="Top" Width="342">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.844,0.851" StartPoint="0.156,0.149">
+                    <GradientStop Color="#FFA57921" Offset="1"/>
+                    <GradientStop Color="#FFB0194F"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock HorizontalAlignment="Left" Margin="479,230.267,0,0" TextWrapping="Wrap" Text="Enter Password" VerticalAlignment="Top" Foreground="#FFB6B2B2" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="479,104.667,0,0" TextWrapping="Wrap" Text="Enter Username" VerticalAlignment="Top" Foreground="#FFB6B2B2" FontSize="20"/>
+        <Rectangle x:Name="Filler" Fill="Black" HorizontalAlignment="Left" Height="450" Margin="428.5,-0.333,0,0" Stroke="Black" VerticalAlignment="Top" Width="45.5"/>
+        <Button x:Name="Back" Content="Button" HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="163.2" Style="{DynamicResource BtnLogin2}" RenderTransformOrigin="0.049,0.321" Click="BtnBack" Margin="657.8,313.287,0,0"/>
+        <Button x:Name="Create" Content="Button" HorizontalAlignment="Left" Height="55" VerticalAlignment="Top" Width="163.2" Style="{DynamicResource BtnCreate}" RenderTransformOrigin="0.049,0.321" Click="BtnCreate" Margin="479,313.287,0,0"/>
+    </Grid>
+</Window>

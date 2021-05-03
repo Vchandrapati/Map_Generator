@@ -1,0 +1,30 @@
+﻿<Window x:Class="Map_Generator.GenerationType"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Labryinth Map Generator" Height="450" Width="600" Background="{x:Null}" WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Rectangle Fill="Black" HorizontalAlignment="Left" Height="450" RadiusY="20.834" RadiusX="20.834" Stroke="Black" VerticalAlignment="Top" Width="600"/>
+        <Canvas x:Name="LogoStack" Margin="0,10,428.665,395">
+            <Image x:Name="Logo" Source="logo.png" Stretch="Fill" RenderTransformOrigin="0.752,0.78" Width="45.315" Height="46.2" Canvas.Left="14" Canvas.Top="4.4"/>
+            <TextBlock x:Name="AppName" HorizontalAlignment="Left" Height="39.629" TextWrapping="Wrap" VerticalAlignment="Top" Width="122.319" Foreground="White" FontFamily="Unispace" FontSize="14" Text="Labyrinth Tech Map Generator&#xA;" Canvas.Left="64.216" Canvas.Top="10.971"/>
+
+        </Canvas>
+        <Button x:Name="CaveGen" Content="Cave Generator" HorizontalAlignment="Left" Height="78.4" Margin="10,125.6,0,0" VerticalAlignment="Top" Width="216" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontFamily="Unispace" FontSize="16" Click="Cell_Generator"/>
+        <Button x:Name="DungeonGen" Content="Dungeon Generator" HorizontalAlignment="Left" Height="78.4" VerticalAlignment="Top" Width="216" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontFamily="Unispace" FontSize="16" Click="Dungeon_Generator" Margin="226,125.6,0,0"/>
+        <Button x:Name="GridGen" HorizontalAlignment="Left" Height="78.4" Margin="10,209,0,0" VerticalAlignment="Top" Width="216" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontFamily="Unispace" FontSize="16" Click="Grid_Generator" Content="Gridmap Generator"/>
+        <Canvas x:Name="MenuBar" Margin="523.481,10,10,410">
+            <Button x:Name="Close" Background="{x:Null}" BorderBrush="{x:Null}" Click="BtnClose" Width="30" Height="30" Canvas.Left="36.519">
+                <Canvas x:Name="Canvas" Height="25"  Width="25">
+                    <Path Stroke="Red" StrokeThickness="2" Data="M0,0 L25,25 M0,25 L25,0"/>
+                </Canvas>
+            </Button>
+            <Button x:Name="Minimize" Content="" HorizontalAlignment="Left" Height="7.332" VerticalAlignment="Top" Width="31.519" Background="White" BorderBrush="White" Click="BtnMinimize" Canvas.Top="11.341"/>
+
+        </Canvas>
+        <Button x:Name="MazeGen" Content="Maze Generator" HorizontalAlignment="Left" Height="78.4" VerticalAlignment="Top" Width="216" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontFamily="Unispace" FontSize="16" Click="Maze_Generator" Margin="226,209,0,0"/>
+
+    </Grid>
+</Window>

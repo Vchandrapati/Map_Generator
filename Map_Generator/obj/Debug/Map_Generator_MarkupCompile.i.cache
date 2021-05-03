@@ -1,0 +1,20 @@
+﻿Map_Generator
+
+
+winexe
+C#
+.cs
+D:\School\SSD Code\Map_Generator\Map_Generator\obj\Debug\
+Map_Generator
+none
+false
+DEBUG;TRACE
+D:\School\SSD Code\Map_Generator\Map_Generator\App.xaml
+7-184347408
+
+16-966519202
+172006607140
+Generators\Maze_Generator.xaml;Generators\Dungeon_Generator.xaml;Generators\Gridmap_Generator.xaml;Generators\Cellular_Generator.xaml;Generation_Type.xaml;CreateAccount.xaml;MainWindow.xaml;
+
+False
+
